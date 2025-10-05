@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SpotLike</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>SpotLife</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>SpotLife</h1>
 
-  <aside class="sidebar">
-    <div class="brand">🎵 SpotLike</div>
-    <div class="search">
-      <input id="search-input" type="text" placeholder="Buscar canciones o artistas...">
-    </div>
-    <button id="login-btn">Conectar con Spotify</button>
-  </aside>
+  <!-- Formulario para subir música -->
+  <section id="upload-section">
+    <h2>Sube tu canción</h2>
+    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="fileToUpload" accept=".mp3" required>
+      <input type="submit" value="Subir">
+    </form>
+    <div id="uploadMsg"></div>
+  </section>
 
-  <main class="main">
-    <h1>Resultados de búsqueda</h1>
-    <div id="results" class="results"></div>
+  <!-- Player -->
+  <section id="player-section">
+    <h2>Reproductor</h2>
+    <audio id="player" controls></audio>
+    <ul id="playlist"></ul>
+  </section>
 
-    <div id="player" class="player">
-      <img id="cover" src="" alt="Portada">
-      <div>
-        <div id="track-title">—</div>
-        <div id="track-artist">—</div>
-      </div>
-      <audio id="audio" controls></audio>
-    </div>
-  </main>
-
-<script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
