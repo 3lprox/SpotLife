@@ -1,6 +1,6 @@
 // ===== CONFIGURACIÓN =====
 const CLIENT_ID = '10aada59823943c49cd7cef01f36de4d'; // tu Client ID
-const REDIRECT_URI = 'https://3lprox.github.io/spotlike/'; // cambia esto a tu GitHub Pages
+const REDIRECT_URI = 'https://3lprox.github.io/spotlife/'; // cambia esto a tu GitHub Pages
 const SCOPES = 'user-read-private user-read-email';
 
 // ===== ELEMENTOS =====
